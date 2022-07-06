@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="Tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link2</title>
+</head>
+<body>
+    <style>
+        a{
+            width: 60px;/*Ширина ссылки*/
+            height: 60px;/*Высота ссылки*/
+            background-color: #22c40d;/*Цвет ссылки*/
+            display: inline-block;
+            border-radius: 100%;
+            position: fixed;
+            left: 60px; /*Отступ от левого края*/
+            bottom: 60px;/*Отступ от нижнего края*/
+            font-size: 40px;
+            color: aliceblue;
+            font-weight: bold;
+            text-align: center;
+            line-height: 60px;
+            box-sizing: border-box;
+        }
+        a::before{
+            content: '';
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            background-color: transparent;
+            border: 1px solid  #22c40d;/*Цвет бортиков*/
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 100%;
+            box-sizing: border-box;
+            animation: link 1.5s infinite;
+        }
+        @keyframes link{
+            0%{
+                transform: scale(1.8);
+                border-color: transparent;
+            }
+            100%{
+                transform: scale(0.9);
+            }
+        }
+    </style>
+    <a href="tel:+905305906985"><!--Нужно вставить цыфры номера телефона вместо  -->
+        <i class="fa-solid fa-phone"></i>
+    </a>
+    <script src="https://kit.fontawesome.com/efecd3dd63.js" crossorigin="anonymous"></script>
+</body>
+</html>
